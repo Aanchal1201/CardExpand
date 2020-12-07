@@ -78,4 +78,7 @@
     bottom: 10px;
     left: 10px;
   }
+  .panelContainer {
+  margin: 5px;
+  }
 }
