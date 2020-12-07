@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  padding: 10px;
+  overflow: hidden;
+}
+.container h1 {
+  color: rgb(48, 47, 47);
+  font-size: 24px;
+  text-align: center;
+}
+.panelContainer {
+  margin: 25px;
+  display: flex;
+}
+.panel {
+  margin: 5px;
+  flex: 1;
+  height: 82vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.8s ease-in;
+}
+.panel h3 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+.panel.active {
+  flex: 10;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+#panel1 {
+  background-image: url("https://source.unsplash.com/1600x900/?nature,world");
+}
+#panel2 {
+  background-image: url("https://source.unsplash.com/1600x900/?forest");
+}
+#panel3 {
+  background-image: url("https://source.unsplash.com/1600x900/?beech,sunny");
+}
+#panel4 {
+  background-image: url("https://source.unsplash.com/1600x900/?winter,city");
+}
+#panel5 {
+  background-image: url("https://source.unsplash.com/1600x900/?mountain,clouds");
+}
+#panel6 {
+  background-image: url("https://source.unsplash.com/1600x900/?sea,lake");
+}
+#panel7 {
+  background-image: url("https://source.unsplash.com/1600x900/?happy,nature");
+}
+
+@media only screen and (max-width: 480px) {
+  .panel:nth-of-type(7),
+  .panel:nth-of-type(6),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+  .panel h3 {
+    bottom: 10px;
+    left: 10px;
+  }
+}
